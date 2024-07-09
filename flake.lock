@@ -1,5 +1,17 @@
 {
   "nodes": {
+    "RetinaFace-R50_pth": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-58VzPRO19BryNmsaq/bAVwPV2Khx3gniyR24GdrO4Ps=",
+        "type": "file",
+        "url": "https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/RetinaFace-R50.pth"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/RetinaFace-R50.pth"
+      }
+    },
     "conda-channels": {
       "flake": false,
       "locked": {
@@ -309,6 +321,18 @@
         "owner": "Preemo-Inc",
         "repo": "mach-nix",
         "type": "github"
+      }
+    },
+    "majicmixRealistic_v6_safetensors": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-gX4MOHNJcaS/GrxQnOB6NOLgMsSxtwMvcXnVZdMMYcU=",
+        "type": "file",
+        "url": "https://huggingface.co/digiplay/majicMIX_realistic_v6/resolve/main/majicmixRealistic_v6.safetensors?download=true"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://huggingface.co/digiplay/majicMIX_realistic_v6/resolve/main/majicmixRealistic_v6.safetensors?download=true"
       }
     },
     "mk-shell-bin": {
@@ -705,6 +729,19 @@
         "type": "indirect"
       }
     },
+    "pasd_zip": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1694152993,
+        "narHash": "sha256-jJyeiNJ7kOpL6GorqgakthZyr321H3y10eD9C6RadWY=",
+        "type": "tarball",
+        "url": "https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/PASD/pasd.zip"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/PASD/pasd.zip"
+      }
+    },
     "poetry2nix": {
       "inputs": {
         "flake-utils": "flake-utils_8",
@@ -773,8 +810,14 @@
     },
     "root": {
       "inputs": {
+        "RetinaFace-R50_pth": "RetinaFace-R50_pth",
+        "majicmixRealistic_v6_safetensors": "majicmixRealistic_v6_safetensors",
         "nix-ml-ops": "nix-ml-ops",
-        "stable-diffusion_v1-5-pruned-emaonly_safetensors": "stable-diffusion_v1-5-pruned-emaonly_safetensors"
+        "pasd_zip": "pasd_zip",
+        "stable-diffusion_v1-5-pruned-emaonly_safetensors": "stable-diffusion_v1-5-pruned-emaonly_safetensors",
+        "stable-diffusion_v1-5-text-encoder": "stable-diffusion_v1-5-text-encoder",
+        "stable-diffusion_v1-5-vae": "stable-diffusion_v1-5-vae",
+        "yolov8n_pt": "yolov8n_pt"
       }
     },
     "rust-overlay": {
@@ -814,6 +857,30 @@
       "original": {
         "type": "file",
         "url": "https://modelscope.cn/models/AI-ModelScope/stable-diffusion-v1-5/resolve/master/v1-5-pruned-emaonly.safetensors"
+      }
+    },
+    "stable-diffusion_v1-5-text-encoder": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-20UkCxPyXdaXAAJ6nZzIBsTToWCxW312lHHtc0Lx4V0=",
+        "type": "file",
+        "url": "https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/text_encoder/model.safetensors?download=true"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/text_encoder/model.safetensors?download=true"
+      }
+    },
+    "stable-diffusion_v1-5-vae": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-8D3V60r638RY/ZFGWUmwBB7ReLS7G2ohIRFik0NsMhk=",
+        "type": "file",
+        "url": "https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/vae/diffusion_pytorch_model.bin?download=true"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/vae/diffusion_pytorch_model.bin?download=true"
       }
     },
     "systems": {
@@ -925,6 +992,18 @@
         "owner": "numtide",
         "repo": "treefmt-nix",
         "type": "github"
+      }
+    },
+    "yolov8n_pt": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-ygO4+AksAg9kqRH7lgavsUC8Qa19z/BP08y3B5+MScE=",
+        "type": "file",
+        "url": "https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/yolov8n.pt"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/yolov8n.pt"
       }
     }
   },

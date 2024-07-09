@@ -1,3 +1,4 @@
+__pycache__/
 /.venv/
 .direnv/
 .devenv/
@@ -6,5 +7,12 @@ result
 .pre-commit-config.yaml
 
 # nixago: ignore-linked-files
+/checkpoints/personalized_models/majicmixRealistic_v6.safetensors
+/runs/pasd/checkpoint-100000
+/checkpoints/stable-diffusion-v1-5/vae/diffusion_pytorch_model.bin
 /checkpoints/stable-diffusion-v1-5/v1-5-pruned-emaonly.safetensors
+/checkpoints/stable-diffusion-v1-5/text_encoder/model.safetensors
+/checkpoints/stable-diffusion-v1-5/model.safetensors
+/annotator/ckpts/yolov8n.pt
+/annotator/ckpts/RetinaFace-R50.pth
 /.vscode/extensions.json

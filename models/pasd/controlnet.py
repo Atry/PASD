@@ -24,6 +24,19 @@ from diffusers.utils import BaseOutput, logging
 from diffusers.models.attention_processor import AttentionProcessor, AttnProcessor
 from diffusers.models.embeddings import TextImageProjection, TextImageTimeEmbedding, TextTimeEmbedding, TimestepEmbedding, Timesteps
 from diffusers.models.modeling_utils import ModelMixin
+
+# Hack to fix a changed import in torchvision 0.17+, which otherwise breaks
+# basicsr; see https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues/13985
+try:
+    import torchvision.transforms.functional_tensor  # noqa: F401
+except ImportError:
+    try:
+        import torchvision.transforms.functional as functional
+        import sys
+        sys.modules["torchvision.transforms.functional_tensor"] = functional
+    except ImportError:
+        pass  # shrug...
+
 from basicsr.archs.rrdbnet_arch import RRDB
 from diffusers.models.unet_2d_blocks import (
     CrossAttnDownBlock2D,
