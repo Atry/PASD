@@ -19,7 +19,7 @@
     };
 
     stable-diffusion_v1-5-pruned-emaonly_safetensors = {
-      url = "https://modelscope.cn/models/AI-ModelScope/stable-diffusion-v1-5/resolve/master/v1-5-pruned-emaonly.safetensors";
+      url = "https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.safetensors?download=true";
       flake = false;
     };
     RetinaFace-R50_pth = {

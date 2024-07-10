@@ -852,11 +852,11 @@
       "locked": {
         "narHash": "sha256-VSuFOrnagcX1Fli+B4Pja1xiJ7tjGQaR0PizGZqDnfE=",
         "type": "file",
-        "url": "https://modelscope.cn/models/AI-ModelScope/stable-diffusion-v1-5/resolve/master/v1-5-pruned-emaonly.safetensors"
+        "url": "https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.safetensors?download=true"
       },
       "original": {
         "type": "file",
-        "url": "https://modelscope.cn/models/AI-ModelScope/stable-diffusion-v1-5/resolve/master/v1-5-pruned-emaonly.safetensors"
+        "url": "https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.safetensors?download=true"
       }
     },
     "stable-diffusion_v1-5-text-encoder": {
