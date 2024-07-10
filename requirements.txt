@@ -2,10 +2,10 @@ diffusers==0.25.0
 accelerate
 transformers
 xformers
-basicsr
+basicsr>=1.4.2
 ultralytics
 webdataset
 open_clip_torch
 einops
-gradio < 4.0.0
+gradio<4.0.0
 pytorch_lightning
