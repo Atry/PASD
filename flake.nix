@@ -63,27 +63,6 @@
               data = { };
               engine = { data, output, ... }: inputs.pasd_zip;
             };
-            # "runs/pasd/controlnet" = {
-            #   data = { };
-            #   engine = { data, output, ... }: pkgs.symlinkJoin {
-            #     name = "controlnet";
-            #     paths = [ "${inputs.pasd_zip}/controlnet" ];
-            #   };
-            # };
-            # "runs/pasd/scaler.pt" = {
-            #   data = { };
-            #   engine = { data, output, ... }: pkgs.runCommand "my-package-test"
-            #     { } ''
-            #     ln -s "${inputs.pasd_zip}/scaler.pt" $out
-            #   '';
-            # };
-            # "runs/pasd/unet" = {
-            #   data = { };
-            #   engine = { data, output, ... }: pkgs.symlinkJoin {
-            #     name = "unet";
-            #     paths = [ "${inputs.pasd_zip}/unet" ];
-            #   };
-            # };
             "checkpoints/stable-diffusion-v1-5/text_encoder/model.safetensors" = {
               data = { };
               engine = { data, output, ... }: inputs.stable-diffusion_v1-5-text-encoder;
