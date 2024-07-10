@@ -328,11 +328,11 @@
       "locked": {
         "narHash": "sha256-gX4MOHNJcaS/GrxQnOB6NOLgMsSxtwMvcXnVZdMMYcU=",
         "type": "file",
-        "url": "https://huggingface.co/digiplay/majicMIX_realistic_v6/resolve/main/majicmixRealistic_v6.safetensors?download=true"
+        "url": "https://www.modelscope.cn/models/popatry/majicMIX_realistic_v6/resolve/master/majicmixRealistic_v6.safetensors"
       },
       "original": {
         "type": "file",
-        "url": "https://huggingface.co/digiplay/majicMIX_realistic_v6/resolve/main/majicmixRealistic_v6.safetensors?download=true"
+        "url": "https://www.modelscope.cn/models/popatry/majicMIX_realistic_v6/resolve/master/majicmixRealistic_v6.safetensors"
       }
     },
     "mk-shell-bin": {
@@ -852,11 +852,11 @@
       "locked": {
         "narHash": "sha256-VSuFOrnagcX1Fli+B4Pja1xiJ7tjGQaR0PizGZqDnfE=",
         "type": "file",
-        "url": "https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.safetensors?download=true"
+        "url": "https://modelscope.cn/models/AI-ModelScope/stable-diffusion-v1-5/resolve/master/v1-5-pruned-emaonly.safetensors"
       },
       "original": {
         "type": "file",
-        "url": "https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.safetensors?download=true"
+        "url": "https://modelscope.cn/models/AI-ModelScope/stable-diffusion-v1-5/resolve/master/v1-5-pruned-emaonly.safetensors"
       }
     },
     "stable-diffusion_v1-5-text-encoder": {
@@ -864,11 +864,11 @@
       "locked": {
         "narHash": "sha256-20UkCxPyXdaXAAJ6nZzIBsTToWCxW312lHHtc0Lx4V0=",
         "type": "file",
-        "url": "https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/text_encoder/model.safetensors?download=true"
+        "url": "https://modelscope.cn/models/AI-ModelScope/stable-diffusion-v1-5/resolve/master/text_encoder/model.safetensors"
       },
       "original": {
         "type": "file",
-        "url": "https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/text_encoder/model.safetensors?download=true"
+        "url": "https://modelscope.cn/models/AI-ModelScope/stable-diffusion-v1-5/resolve/master/text_encoder/model.safetensors"
       }
     },
     "stable-diffusion_v1-5-vae": {
@@ -876,11 +876,11 @@
       "locked": {
         "narHash": "sha256-8D3V60r638RY/ZFGWUmwBB7ReLS7G2ohIRFik0NsMhk=",
         "type": "file",
-        "url": "https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/vae/diffusion_pytorch_model.bin?download=true"
+        "url": "https://modelscope.cn/models/AI-ModelScope/stable-diffusion-v1-5/resolve/master/vae/diffusion_pytorch_model.bin"
       },
       "original": {
         "type": "file",
-        "url": "https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/vae/diffusion_pytorch_model.bin?download=true"
+        "url": "https://modelscope.cn/models/AI-ModelScope/stable-diffusion-v1-5/resolve/master/vae/diffusion_pytorch_model.bin"
       }
     },
     "systems": {

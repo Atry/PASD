@@ -10,16 +10,16 @@
       flake = false;
     };
     stable-diffusion_v1-5-vae = {
-      url = "https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/vae/diffusion_pytorch_model.bin?download=true";
+      url = "https://modelscope.cn/models/AI-ModelScope/stable-diffusion-v1-5/resolve/master/vae/diffusion_pytorch_model.bin";
       flake = false;
     };
     stable-diffusion_v1-5-text-encoder = {
-      url = "https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/text_encoder/model.safetensors?download=true";
+      url = "https://modelscope.cn/models/AI-ModelScope/stable-diffusion-v1-5/resolve/master/text_encoder/model.safetensors";
       flake = false;
     };
 
     stable-diffusion_v1-5-pruned-emaonly_safetensors = {
-      url = "https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.safetensors?download=true";
+      url = "https://modelscope.cn/models/AI-ModelScope/stable-diffusion-v1-5/resolve/master/v1-5-pruned-emaonly.safetensors";
       flake = false;
     };
     RetinaFace-R50_pth = {
@@ -31,7 +31,7 @@
       flake = false;
     };
     majicmixRealistic_v6_safetensors = {
-      url = "https://huggingface.co/digiplay/majicMIX_realistic_v6/resolve/main/majicmixRealistic_v6.safetensors?download=true";
+      url = "https://www.modelscope.cn/models/popatry/majicMIX_realistic_v6/resolve/master/majicmixRealistic_v6.safetensors";
       flake = false;
     };
 
