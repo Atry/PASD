@@ -34,6 +34,14 @@
       url = "https://huggingface.co/digiplay/majicMIX_realistic_v6/resolve/main/majicmixRealistic_v6.safetensors?download=true";
       flake = false;
     };
+    xsarchitectural_v11_ckpt = {
+      url = "https://www.modelscope.cn/models/popatry/XSarchitectural-InteriorDesign-ForXSLora/resolve/master/xsarchitectural_v11.ckpt";
+      flake = false;
+    };
+    toonyou_beta6_safetensors = {
+      url = "https://www.modelscope.cn/models/popatry/ToonYou/resolve/master/toonyou_beta6.safetensors";
+      flake = false;
+    };
 
   };
   outputs = inputs: inputs.nix-ml-ops.lib.mkFlake { inherit inputs; } {
@@ -56,6 +64,14 @@
         ];
 
         nixago.requests = {
+          "checkpoints/personalized_models/toonyou_beta6.safetensors" = {
+            data = { };
+            engine = { data, output, ... }: inputs.toonyou_beta6_safetensors;
+          };
+          "checkpoints/personalized_models/xsarchitectural_v11.ckpt" = {
+            data = { };
+            engine = { data, output, ... }: inputs.xsarchitectural_v11_ckpt;
+          };
           "checkpoints/personalized_models/majicmixRealistic_v6.safetensors" = {
             data = { };
             engine = { data, output, ... }: inputs.majicmixRealistic_v6_safetensors;
