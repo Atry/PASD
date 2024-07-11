@@ -36,68 +36,69 @@
     };
 
   };
-  outputs = inputs @ { nix-ml-ops, ... }:
-    nix-ml-ops.lib.mkFlake { inherit inputs; } {
-      imports = [
-        nix-ml-ops.flakeModules.devcontainer
-        nix-ml-ops.flakeModules.nixIde
-        nix-ml-ops.flakeModules.nixLd
-        nix-ml-ops.flakeModules.pythonVscode
-        nix-ml-ops.flakeModules.ldFallbackManylinux
-      ];
-      perSystem = { pkgs, config, lib, system, ... }: {
-        ml-ops.devcontainer = {
+  outputs = inputs: inputs.nix-ml-ops.lib.mkFlake { inherit inputs; } {
+    imports = [
+      inputs.nix-ml-ops.flakeModules.devcontainer
+      inputs.nix-ml-ops.flakeModules.nixIde
+      inputs.nix-ml-ops.flakeModules.nixLd
+      inputs.nix-ml-ops.flakeModules.pythonVscode
+      inputs.nix-ml-ops.flakeModules.ldFallbackManylinux
+      inputs.nix-ml-ops.flakeModules.cuda
+      inputs.nix-ml-ops.flakeModules.linkNvidiaDrivers
+    ];
+    perSystem = { pkgs, config, lib, system, ... }: {
+      ml-ops.devcontainer = {
 
-          LD_LIBRARY_PATH = lib.mkMerge [
-            # `glib` and `libGL` are opencv-python dependencies. They must be added to `$LD_LIBRARY_PATH`, unlike other libraries solved by $LD_AUDIT, because `opencv-python` does not respect $LD_AUDIT.
-            "${pkgs.glib.out}/lib"
-            "${pkgs.libGL}/lib"
-          ];
+        LD_LIBRARY_PATH = lib.mkMerge [
+          # `glib` and `libGL` are opencv-python dependencies. They must be added to `$LD_LIBRARY_PATH`, unlike other libraries solved by $LD_AUDIT, because `opencv-python` does not respect $LD_AUDIT.
+          "${pkgs.glib.out}/lib"
+          "${pkgs.libGL}/lib"
+        ];
 
-          nixago.requests = {
-            "checkpoints/personalized_models/majicmixRealistic_v6.safetensors" = {
-              data = { };
-              engine = { data, output, ... }: inputs.majicmixRealistic_v6_safetensors;
-            };
-            "runs/pasd/checkpoint-100000" = {
-              data = { };
-              engine = { data, output, ... }: inputs.pasd_zip;
-            };
-            "checkpoints/stable-diffusion-v1-5/text_encoder/model.safetensors" = {
-              data = { };
-              engine = { data, output, ... }: inputs.stable-diffusion_v1-5-text-encoder;
-            };
-            "checkpoints/stable-diffusion-v1-5/vae/diffusion_pytorch_model.bin" = {
-              data = { };
-              engine = { data, output, ... }: inputs.stable-diffusion_v1-5-vae;
-            };
-            "checkpoints/stable-diffusion-v1-5/v1-5-pruned-emaonly.safetensors" = {
-              data = { };
-              engine = { data, output, ... }: inputs.stable-diffusion_v1-5-pruned-emaonly_safetensors;
-            };
-            "annotator/ckpts/RetinaFace-R50.pth" = {
-              data = { };
-              engine = { data, output, ... }: inputs.RetinaFace-R50_pth;
-            };
-            "annotator/ckpts/yolov8n.pt" = {
-              data = { };
-              engine = { data, output, ... }: inputs.yolov8n_pt;
-            };
+        nixago.requests = {
+          "checkpoints/personalized_models/majicmixRealistic_v6.safetensors" = {
+            data = { };
+            engine = { data, output, ... }: inputs.majicmixRealistic_v6_safetensors;
           };
-          devenvShellModule = {
-            languages = {
-              python = {
+          "runs/pasd/checkpoint-100000" = {
+            data = { };
+            engine = { data, output, ... }: inputs.pasd_zip;
+          };
+          "checkpoints/stable-diffusion-v1-5/text_encoder/model.safetensors" = {
+            data = { };
+            engine = { data, output, ... }: inputs.stable-diffusion_v1-5-text-encoder;
+          };
+          "checkpoints/stable-diffusion-v1-5/vae/diffusion_pytorch_model.bin" = {
+            data = { };
+            engine = { data, output, ... }: inputs.stable-diffusion_v1-5-vae;
+          };
+          "checkpoints/stable-diffusion-v1-5/v1-5-pruned-emaonly.safetensors" = {
+            data = { };
+            engine = { data, output, ... }: inputs.stable-diffusion_v1-5-pruned-emaonly_safetensors;
+          };
+          "annotator/ckpts/RetinaFace-R50.pth" = {
+            data = { };
+            engine = { data, output, ... }: inputs.RetinaFace-R50_pth;
+          };
+          "annotator/ckpts/yolov8n.pt" = {
+            data = { };
+            engine = { data, output, ... }: inputs.yolov8n_pt;
+          };
+        };
+        devenvShellModule = {
+          languages = {
+            python = {
+              enable = true;
+              venv = {
                 enable = true;
-                venv = {
-                  enable = true;
-                  requirements = builtins.readFile ./requirements.txt;
-                };
+                requirements = builtins.readFile ./requirements.txt;
               };
             };
           };
         };
-
       };
+
     };
+  };
 }
 
