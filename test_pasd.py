@@ -11,6 +11,7 @@ except ImportError:
         pass  # shrug...
 
 import os
+from pathlib import Path
 import sys
 import cv2
 import glob
@@ -53,7 +54,7 @@ def load_pasd_pipeline(args, accelerator, enable_xformers_memory_efficient_atten
         from models.pasd.controlnet import ControlNetModel
     # Load scheduler, tokenizer and models.
     if args.control_type=="grayscale":
-        scheduler = UniPCMultistepScheduler.from_pretrained("/".join(args.pasd_model_path.split("/")[:-1]), subfolder="scheduler")
+        scheduler = UniPCMultistepScheduler.from_pretrained(args.pasd_model_path.parent, subfolder="scheduler")
     else:
         scheduler = UniPCMultistepScheduler.from_pretrained(args.pretrained_model_path, subfolder="scheduler")
     text_encoder = CLIPTextModel.from_pretrained(args.pretrained_model_path, subfolder="text_encoder")
@@ -286,7 +287,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--pretrained_model_path", type=str, default="checkpoints/stable-diffusion-v1-5", help="path of base SD model")
     parser.add_argument("--lcm_lora_path", type=str, default="checkpoints/lcm-lora-sdv1-5", help="path of LCM lora model")
-    parser.add_argument("--pasd_model_path", type=str, default="runs/pasd/checkpoint-100000", help="path of PASD model")
+    parser.add_argument("--pasd_model_path", type=Path, default="runs/pasd/checkpoint-100000", help="path of PASD model")
     parser.add_argument("--personalized_model_path", type=str, default="majicmixRealistic_v7.safetensors", help="name of personalized dreambooth model, path is 'checkpoints/personalized_models'") # toonyou_beta3.safetensors, majicmixRealistic_v6.safetensors, unet_disney
     parser.add_argument("--control_type", choices=['realisr', 'grayscale'], nargs='?', default="realisr", help="task name")
     parser.add_argument('--high_level_info', choices=['classification', 'detection', 'caption'], nargs='?', default='caption', help="high level information for prompt generation")
