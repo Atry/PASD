@@ -5,10 +5,6 @@
     nix-ml-ops.url = "github:Atry/nix-ml-ops";
     nix-ml-ops.inputs.systems.url = "github:nix-systems/default";
 
-    pasd_zip = {
-      url = "https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/PASD/pasd.zip";
-      flake = false;
-    };
     stable-diffusion_v1-5-vae = {
       url = "https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/vae/diffusion_pytorch_model.bin?download=true";
       flake = false;
@@ -75,10 +71,6 @@
           "checkpoints/personalized_models/majicmixRealistic_v6.safetensors" = {
             data = { };
             engine = { data, output, ... }: inputs.majicmixRealistic_v6_safetensors;
-          };
-          "runs/pasd/checkpoint-100000" = {
-            data = { };
-            engine = { data, output, ... }: inputs.pasd_zip;
           };
           "checkpoints/stable-diffusion-v1-5/text_encoder/model.safetensors" = {
             data = { };

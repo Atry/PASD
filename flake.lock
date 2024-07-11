@@ -729,19 +729,6 @@
         "type": "indirect"
       }
     },
-    "pasd_zip": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1694152993,
-        "narHash": "sha256-jJyeiNJ7kOpL6GorqgakthZyr321H3y10eD9C6RadWY=",
-        "type": "tarball",
-        "url": "https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/PASD/pasd.zip"
-      },
-      "original": {
-        "type": "tarball",
-        "url": "https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/PASD/pasd.zip"
-      }
-    },
     "poetry2nix": {
       "inputs": {
         "flake-utils": "flake-utils_8",
@@ -813,7 +800,6 @@
         "RetinaFace-R50_pth": "RetinaFace-R50_pth",
         "majicmixRealistic_v6_safetensors": "majicmixRealistic_v6_safetensors",
         "nix-ml-ops": "nix-ml-ops",
-        "pasd_zip": "pasd_zip",
         "stable-diffusion_v1-5-pruned-emaonly_safetensors": "stable-diffusion_v1-5-pruned-emaonly_safetensors",
         "stable-diffusion_v1-5-text-encoder": "stable-diffusion_v1-5-text-encoder",
         "stable-diffusion_v1-5-vae": "stable-diffusion_v1-5-vae",
