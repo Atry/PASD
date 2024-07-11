@@ -5,10 +5,6 @@
     nix-ml-ops.url = "github:Atry/nix-ml-ops";
     nix-ml-ops.inputs.systems.url = "github:nix-systems/default";
 
-    pasd_zip = {
-      url = "https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/PASD/pasd.zip";
-      flake = false;
-    };
     stable-diffusion_v1-5-vae = {
       url = "https://modelscope.cn/models/AI-ModelScope/stable-diffusion-v1-5/resolve/master/vae/diffusion_pytorch_model.bin";
       flake = false;
@@ -34,6 +30,14 @@
       url = "https://www.modelscope.cn/models/popatry/majicMIX_realistic_v6/resolve/master/majicmixRealistic_v6.safetensors";
       flake = false;
     };
+    xsarchitectural_v11_ckpt = {
+      url = "https://www.modelscope.cn/models/popatry/XSarchitectural-InteriorDesign-ForXSLora/resolve/master/xsarchitectural_v11.ckpt";
+      flake = false;
+    };
+    toonyou_beta6_safetensors = {
+      url = "https://www.modelscope.cn/models/popatry/ToonYou/resolve/master/toonyou_beta6.safetensors";
+      flake = false;
+    };
 
   };
   outputs = inputs: inputs.nix-ml-ops.lib.mkFlake { inherit inputs; } {
@@ -56,13 +60,17 @@
         ];
 
         nixago.requests = {
+          "checkpoints/personalized_models/toonyou_beta6.safetensors" = {
+            data = { };
+            engine = { data, output, ... }: inputs.toonyou_beta6_safetensors;
+          };
+          "checkpoints/personalized_models/xsarchitectural_v11.ckpt" = {
+            data = { };
+            engine = { data, output, ... }: inputs.xsarchitectural_v11_ckpt;
+          };
           "checkpoints/personalized_models/majicmixRealistic_v6.safetensors" = {
             data = { };
             engine = { data, output, ... }: inputs.majicmixRealistic_v6_safetensors;
-          };
-          "runs/pasd/checkpoint-100000" = {
-            data = { };
-            engine = { data, output, ... }: inputs.pasd_zip;
           };
           "checkpoints/stable-diffusion-v1-5/text_encoder/model.safetensors" = {
             data = { };

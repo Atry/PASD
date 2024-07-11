@@ -30,7 +30,9 @@ def load_dreambooth_lora(unet, vae=None, text_encoder=None, model_path=None, ble
     if model_path is None: return unet
     
     if model_path.endswith(".ckpt"):
-        base_state_dict = torch.load(model_path)['state_dict']
+        base_state_dict = torch.load(model_path)
+        base_state_dict = base_state_dict.get('state_dict', base_state_dict)
+        is_lora = False
     elif model_path.endswith(".safetensors"):
         state_dict = {}
         with safe_open(model_path, framework="pt", device="cpu") as f:

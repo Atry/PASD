@@ -729,19 +729,6 @@
         "type": "indirect"
       }
     },
-    "pasd_zip": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1694152993,
-        "narHash": "sha256-jJyeiNJ7kOpL6GorqgakthZyr321H3y10eD9C6RadWY=",
-        "type": "tarball",
-        "url": "https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/PASD/pasd.zip"
-      },
-      "original": {
-        "type": "tarball",
-        "url": "https://public-vigen-video.oss-cn-shanghai.aliyuncs.com/robin/models/PASD/pasd.zip"
-      }
-    },
     "poetry2nix": {
       "inputs": {
         "flake-utils": "flake-utils_8",
@@ -813,10 +800,11 @@
         "RetinaFace-R50_pth": "RetinaFace-R50_pth",
         "majicmixRealistic_v6_safetensors": "majicmixRealistic_v6_safetensors",
         "nix-ml-ops": "nix-ml-ops",
-        "pasd_zip": "pasd_zip",
         "stable-diffusion_v1-5-pruned-emaonly_safetensors": "stable-diffusion_v1-5-pruned-emaonly_safetensors",
         "stable-diffusion_v1-5-text-encoder": "stable-diffusion_v1-5-text-encoder",
         "stable-diffusion_v1-5-vae": "stable-diffusion_v1-5-vae",
+        "toonyou_beta6_safetensors": "toonyou_beta6_safetensors",
+        "xsarchitectural_v11_ckpt": "xsarchitectural_v11_ckpt",
         "yolov8n_pt": "yolov8n_pt"
       }
     },
@@ -972,6 +960,18 @@
         "type": "github"
       }
     },
+    "toonyou_beta6_safetensors": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-0hQ+o+QBLxd/2U9/2Ouw3F6oyvD+ByCR8l1Ac5QW0f8=",
+        "type": "file",
+        "url": "https://www.modelscope.cn/models/popatry/ToonYou/resolve/master/toonyou_beta6.safetensors"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://www.modelscope.cn/models/popatry/ToonYou/resolve/master/toonyou_beta6.safetensors"
+      }
+    },
     "treefmt-nix": {
       "inputs": {
         "nixpkgs": [
@@ -992,6 +992,18 @@
         "owner": "numtide",
         "repo": "treefmt-nix",
         "type": "github"
+      }
+    },
+    "xsarchitectural_v11_ckpt": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-KBFdX+zEAfjckkKhw07b8rQuie8zmPxixT+DwCaLFGI=",
+        "type": "file",
+        "url": "https://www.modelscope.cn/models/popatry/XSarchitectural-InteriorDesign-ForXSLora/resolve/master/xsarchitectural_v11.ckpt"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://www.modelscope.cn/models/popatry/XSarchitectural-InteriorDesign-ForXSLora/resolve/master/xsarchitectural_v11.ckpt"
       }
     },
     "yolov8n_pt": {
