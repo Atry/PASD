@@ -350,6 +350,18 @@
         "type": "github"
       }
     },
+    "mo-di-diffusion_unet_diffusion_pytorch_model": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-pOnUKVSjwStFbr7ZCMcuZN7qaZlIoftdZB9PgMt2tDY=",
+        "type": "file",
+        "url": "https://modelscope.cn/models/dienstag/mo-di-diffusion/resolve/master/unet/diffusion_pytorch_model.bin"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://modelscope.cn/models/dienstag/mo-di-diffusion/resolve/master/unet/diffusion_pytorch_model.bin"
+      }
+    },
     "nix": {
       "inputs": {
         "lowdown-src": "lowdown-src",
@@ -799,6 +811,7 @@
       "inputs": {
         "RetinaFace-R50_pth": "RetinaFace-R50_pth",
         "majicmixRealistic_v6_safetensors": "majicmixRealistic_v6_safetensors",
+        "mo-di-diffusion_unet_diffusion_pytorch_model": "mo-di-diffusion_unet_diffusion_pytorch_model",
         "nix-ml-ops": "nix-ml-ops",
         "stable-diffusion_v1-5-pruned-emaonly_safetensors": "stable-diffusion_v1-5-pruned-emaonly_safetensors",
         "stable-diffusion_v1-5-text-encoder": "stable-diffusion_v1-5-text-encoder",

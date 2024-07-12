@@ -5,6 +5,11 @@
     nix-ml-ops.url = "github:Atry/nix-ml-ops";
     nix-ml-ops.inputs.systems.url = "github:nix-systems/default";
 
+    mo-di-diffusion_unet_diffusion_pytorch_model = {
+      url = "https://modelscope.cn/models/dienstag/mo-di-diffusion/resolve/master/unet/diffusion_pytorch_model.bin";
+      flake = false;
+    };
+
     stable-diffusion_v1-5-vae = {
       url = "https://modelscope.cn/models/AI-ModelScope/stable-diffusion-v1-5/resolve/master/vae/diffusion_pytorch_model.bin";
       flake = false;
@@ -60,6 +65,10 @@
         ];
 
         nixago.requests = {
+          "checkpoints/personalized_models/unet_disney/diffusion_pytorch_model.bin" = {
+            data = { };
+            engine = { data, output, ... }: inputs.mo-di-diffusion_unet_diffusion_pytorch_model;
+          };
           "checkpoints/personalized_models/toonyou_beta6.safetensors" = {
             data = { };
             engine = { data, output, ... }: inputs.toonyou_beta6_safetensors;
