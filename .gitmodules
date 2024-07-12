@@ -3,4 +3,4 @@
 	url = https://www.modelscope.cn/popatry/PASD.git
 [submodule "checkpoints/lcm-lora-sdv1-5"]
 	path = checkpoints/lcm-lora-sdv1-5
-	url = https://huggingface.co/latent-consistency/lcm-lora-sdv1-5
+	url = https://modelscope.cn/models/eavesy/lcm-lora-sdv1-5.git
