@@ -2,7 +2,6 @@ diffusers==0.25.0
 accelerate
 transformers
 xformers
-basicsr>=1.4.2
 ultralytics
 webdataset
 open_clip_torch
